@@ -10,6 +10,16 @@
   height: 48px;
 }
 
+.pokémon {
+  width: 200px;
+  height: 200px;
+}
+
+.sprites > img {
+  width: 150px;
+  height: 150px;
+}
+
 .da {
   display: flex;
   justify-content: center;

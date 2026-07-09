@@ -6,7 +6,7 @@ function initialise() {
 }
 
 async function addPokémon() {
-  let contentRef = document.getElementById("content");
+  let contentRef = document.getElementById("pokéCards");
   contentRef.innerHTML = ``;
   for (let index = 1; index < 21; index++) {
     let sprite = await getSprite(index);
@@ -33,12 +33,12 @@ async function getType(index) {
 async function getMoreTypes(index) {
   let response = await fetch(BASE_URL + "pokemon/" + index);
   let responseAsJson = await response.json();
-  let typesRef = document.getElementById("allTypes"+index);
+  let typesRef = document.getElementById("allTypes" + index);
   typesRef.innerHTML = ``;
   for (let subindex = 0; subindex < responseAsJson.types.length; subindex++) {
     typesRef.innerHTML += `
                           <p class="types">${responseAsJson.types[subindex].type.name}</p>
-                          `
+                          `;
   }
 }
 
@@ -46,6 +46,25 @@ async function getName(index) {
   let response = await fetch(BASE_URL + "pokemon/" + index);
   let responseAsJson = await response.json();
   return capitaliseFirstLetter(responseAsJson.forms[0].name);
+}
+
+async function createDialog(index) {
+  
+}
+
+function openDialog(index) {
+  let dialogRef = document.getElementById("dialog");
+  createDialog(index);
+  dialogRef.showModal();
+}
+
+function closeDialog() {
+  let dialogRef = document.getElementById("dialog");
+  dialogRef.close();
+}
+
+function stopPropagation(event) {
+  event.stopPropagation();
 }
 
 async function capitaliseFirstLetter(name) {

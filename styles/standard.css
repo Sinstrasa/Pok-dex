@@ -12,6 +12,7 @@ body {
 
 button:hover {
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 header {
@@ -27,12 +28,6 @@ h1 {
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  padding: 60px max(calc(50% - 720px), 45px);
-  flex-wrap: wrap;
   flex: 1;
 }
 

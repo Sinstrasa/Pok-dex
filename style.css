@@ -10,12 +10,23 @@
   height: 48px;
 }
 
+.poké_cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 60px max(calc(50% - 720px), 45px);
+  flex-wrap: wrap;
+}
+
 .pokémon {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   width: 200px;
   height: 200px;
+  border: none;
+  border-radius: 16px;
   color: white;
 }
 
@@ -39,7 +50,7 @@
 
 .types {
   padding: 4px;
-  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 8px;
 }
 

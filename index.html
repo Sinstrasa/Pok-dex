@@ -31,7 +31,14 @@
         <button>Search</button>
       </section>
     </header>
-    <main id="content" data-id="content"></main>
+    <main data-id="content">
+      <section class="poké_cards" id="pokéCards"></section>
+      <section>
+        <dialog id="dialog" data-id="dialog">
+          <article onclick="stopPropagation(event)"></article>
+        </dialog>
+      </section>
+    </main>
     <footer>
       <section class="da">
         <img src="assets/icons/da_logo.svg" alt="Logo of Developer Akademie" />

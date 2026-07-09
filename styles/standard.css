@@ -10,6 +10,10 @@ body {
   min-height: 100dvh;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 header {
   display: flex;
   justify-content: space-between;
